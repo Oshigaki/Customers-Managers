@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Grand+Hotel&family=Montserrat:wght@100;300;400&family=Poppins:wght@300;400;500&family=Roboto:wght@300;400&display=swap');
+body{
+    margin: 0px;
+}
+
+main{
+    padding: 0px 40px 0px 40px;
+}
+header{
+    width: 98%;
+    padding: 1% 1%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(79, 78, 78);
+}
+.date-time-container{
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.fa-solid{
+    color: rgb(43, 42, 42);
+}
+.date-container,
+.time-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+button{
+    cursor: pointer;
+}
+#recherche{
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+}
+select{
+    padding: 8px 20px 8px 20px; 
+    margin-left: 10px;
+    border-radius: 5px;
+}
+#add{
+    background-color: #a9d192;
+    padding: 8px 20px 8px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+#add:hover{
+    background-color: #77a05e;
+    color: black;
+}
+#delete{
+    background-color: #f41703;
+    padding: 8px 20px 8px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+i{
+    margin-right: 5px;
+    color: #fff;
+}
+#delete:hover{
+    background-color: #97281e;
+    color: white;
+}
+.user-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    overflow: hidden;
+    cursor: pointer;
+    overflow: hidden;
+}
+.user-circle img {
+    width: 162%;
+    transform: translateX(-30%);
+}
+.filter-modif-bar{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 5%;
+}
+.filter-container{
+    display: flex;
+    justify-content: space-between;
+    width: 13%;
+}
+.modif-container{
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+.add-button-container{
+    margin-right: 2%;
+}
+.table-list-container{
+    margin: 0% 5%;
+    border-bottom: 2px solid #777777;
+}
+.table-header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    background-color:#777777 ;
+}
+.table-header div{
+    border-top: 2px solid #777777;
+    border-left: 2px solid #777777;
+    padding: 0.5% 0%;
+}
+#table-body-container{
+    width: 100%;
+}
+.checkbox-container{
+    width: 30px;
+    text-align: center;
+}
+.id-container{
+    width: 70px;
+    text-align: center;
+}
+.surname-container,
+.name-container,
+.birthdate-container,
+.Email-container{
+    width: 20%;
+    text-align: center;
+}
+.Phone-container,
+.gender-container{
+    width: 8%;
+    text-align: center;
+}
+.table-line{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.table-line>div {
+    border-top: 2px solid #777777;
+    border-left: 2px solid #777777;
+    padding: 0.5% 0%;
+}
+.checked{
+    width: 300px;
+    border: 2px solid #23d7f2;
+}
+.Actions-container{
+    display: flex;
+    width: 12%;
+    justify-content: space-around;
+    border-right: 2px solid #777777;
+}
