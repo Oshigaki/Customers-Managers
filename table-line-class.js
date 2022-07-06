@@ -1,16 +1,18 @@
+//Création d'une instance d'utilisateur
 
 class userClass {
     static counter = 0
-    constructor(id, surname, name, birthDate, email, phone, gender, comments) {
+    constructor(id, surname, name, birthDate, email, phone, sexe, comments) {
         this.id = id
         this.surname = surname
         this.name = name
         this.birthDate = birthDate
         this.email = email
         this.phone = phone
-        this.gender = gender
+        this.sexe = sexe
         this.comments = comments
     }
+//recupération des valeurs de l'utilisateur dans une instance 
 
     static createUser() {
         this.counter++;
@@ -21,13 +23,14 @@ class userClass {
          document.getElementById("birthDate").value,
          document.getElementById("email").value,
          document.getElementById("phone").value,
-         document.getElementById("gender").value,
+         document.getElementById("sexe").value,
          document.getElementById("comments").value
          );
         return user;
     }
+
+//conversion de l'instance en objet
     static convertClassInstanceToObject(user) {
-        // this.counter++
         let userObject = {
             id: user.id,
             surname: user.surname,
@@ -35,23 +38,22 @@ class userClass {
             birthDate: user.birthDate,
             email: user.email,
             phone: user.phone,
-            gender: user.gender,
+            sexe: user.sexe,
             comments: user.comments
         }
         return userObject
     }
 
+    //Ajouter l'utilisateur dans la liste d'interface
+
     static addUserToUserList(user) {
-
-        // let user = localStorage.getItem(`Utilisateur ${id}`);
-
         document.getElementById(`id-container ${user.id}` ).textContent = `${user.id} `;
         document.getElementById(`surname-container ${user.id}` ).textContent = `${user.surname} `;
         document.getElementById(`name-container ${user.id}` ).textContent = `${user.name} `;
         document.getElementById(`birthDate-container ${user.id}` ).textContent = `${user.birthDate} `;
         document.getElementById(`email-container ${user.id}` ).innerHTML = `${user.email} `;
         document.getElementById(`phone-container ${user.id}` ).textContent = `${user.phone} `;
-        document.getElementById(`gender-container ${user.id}` ).textContent = `${user.gender} `;
+        document.getElementById(`sexe-container ${user.id}` ).textContent = `${user.sexe} `;
         document.getElementById(`comments-container ${user.id}` ).textContent = `${user.comments} `;
     }
     static addUserToDataList(userObject,storage) {
@@ -64,3 +66,6 @@ class userClass {
         return JSON.parse(localStorage.getItem("UsersList"))
     }
 }
+
+
+

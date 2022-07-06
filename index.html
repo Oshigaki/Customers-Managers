@@ -77,11 +77,11 @@
         </div>
     </header>
     <main>
-        <div class="filter-modif-bar">
+        <div class="filter-bar">
             <div class="filter-container">
                 <div class="search-bar-container">
                     <div class="search-bar-text">
-                        <input type="text" name="" id="recherche" placeholder="Search">
+                        <input type="text" name="" id="recherche" placeholder="recherche" onkeyup="filter()">
                     </div>
                     <div class="search-bar-icon"></div>
                 </div>
@@ -127,7 +127,7 @@
                 <div class="Phone-container">
                     <span>Phone</span>
                 </div>
-                <div class="gender-container">
+                <div class="sexe-container">
                     <span>Sexe</span>
                 </div>
                 <div class="Actions-container">
@@ -169,7 +169,7 @@
                         <div class="form-line-second-level">
                             <label>
                                 <span>Genre</span>
-                                <select name="" id="gender" autocomplete="off">
+                                <select name="" id="sexe" autocomplete="off">
                                     <option value="">Veuillez choisir le Sexe</option>
                                     <option value="Homme">Homme</option>
                                     <option value="Femme">Femme</option>
@@ -196,7 +196,7 @@
         </div>
     </main>
 </body>
-<script src="./date-time.js"></script>
+<script src="./header.js"></script>
 <script src="./modals.js"></script>
 <script src="./table-line-class.js"></script>
 <script src="./line-handler.js"></script>

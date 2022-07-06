@@ -24,7 +24,7 @@ function modifyInfosModal(lineid) {
     document.getElementById("birthDate").value = `${line.birthDate} `;
     document.getElementById("email").value = `${line.email} `;
     document.getElementById("phone").value = `${line.phone} `;
-    document.getElementById("gender").value = `${line.gender} `;
+    document.getElementById("sexe").value = `${line.sexe} `;
     document.getElementById("comments").value = `${line.comments} `;
     document.getElementById("table-line-modal-container").style.display = 'flex'
     
@@ -37,14 +37,24 @@ function showInfosModal(lineid) {
     document.getElementById("birthDate").value = `${line.birthDate} `;
     document.getElementById("email").value = `${line.email} `;
     document.getElementById("phone").value = `${line.phone} `;
-    document.getElementById("gender").value = `${line.gender} `;
+    document.getElementById("sexe").value = `${line.sexe} `;
     document.getElementById("comments").value = `${line.comments} `;
     document.getElementById("table-line-modal-container").style.display = 'flex'
 
     document.getElementById("buttons").style.display = "none"
 }
 
-// Suppresseur de lignes
+// Suppression de la ligne
 function lineDeleter(id) {
     document.getElementById("table-body-container").removeChild(document.getElementById(`table-line ${id}`));
+}
+
+//filtration de tableau
+
+function filter(event){
+    let key=event.target.value;
+    let users=UserList()
+    users.filter((user)=>{
+        return(new RegExp(key))
+    })
 }

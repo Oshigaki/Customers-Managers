@@ -20,7 +20,7 @@ function lineCreator(lineid) {
     document.getElementById("table-body-container").insertAdjacentHTML('afterbegin', `
     <div class="table-line ${lineid}" id="table-line ${lineid}">
         <div class="checkbox-container">
-            <input type="checkbox" name="" id="checkbox ${lineid} " />
+            <input type="checkbox" name="" id="checkbox ${lineid} " class= "user-checkbox"/>
         </div>
         <div class="id-container" onclick="showModal('table-line-modal-container')">
             <span id="id-container ${lineid}" ></span>
@@ -40,8 +40,8 @@ function lineCreator(lineid) {
         <div class="Phone-container"  onclick="showModal('table-line-modal-container')">
             <span id="phone-container ${lineid}"></span>
         </div>
-        <div class="gender-container"  onclick="showModal('table-line-modal-container')">
-            <span id="gender-container ${lineid}"></span>
+        <div class="sexe-container"  onclick="showModal('table-line-modal-container')">
+            <span id="sexe-container ${lineid}"></span>
         </div>
         <div class="Actions-container">
             <div class="modify-action-container" onclick="modifyInfosModal(${lineid},infosRecoverer())"><i class="fa-solid fa-pencil"></i></div>
@@ -57,4 +57,11 @@ function lineCreator(lineid) {
             </div>
         </div>
     </div>  `);
+}
+
+//suppression global
+function removeCheckboxUser(){
+    let checkbox= div.getElementByclassName('user-checkbox');
+
+    console.log(checkbox);
 }
